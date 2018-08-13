@@ -6,5 +6,5 @@ After:
 ---
 Director:
   rules:
-   'api/v1/live': 'VersionedRestfulServer'
-   'api/v1': 'RestfulServer'
+   'api/r1/live': 'VersionedRestfulServer'
+   'api/r1': 'RestfulServer'

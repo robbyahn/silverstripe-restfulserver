@@ -34,7 +34,7 @@ class RestfulServer extends Controller
         #'$ClassName' => 'handleList',
     );
 
-    protected static $api_base = "api/v1/";
+    protected static $api_base = "api/r1/";
 
     protected static $authenticator = 'BasicRestfulAuthenticator';
 
@@ -199,7 +199,7 @@ class RestfulServer extends Controller
         // $obj can be either a DataObject or a SS_List,
         // depending on the request
         if ($id) {
-            // Format: /api/v1/<MyClass>/<ID>
+            // Format: /api/r1/<MyClass>/<ID>
             $obj = $this->getObjectQuery($className, $id, $params)->First();
             if (!$obj) {
                 return $this->notFound();
@@ -208,7 +208,7 @@ class RestfulServer extends Controller
                 return $this->permissionFailure();
             }
 
-            // Format: /api/v1/<MyClass>/<ID>/<Relation>
+            // Format: /api/r1/<MyClass>/<ID>/<Relation>
             if ($relationName) {
                 $obj = $this->getObjectRelationQuery($obj, $params, $sort, $limit, $relationName);
                 if (!$obj) {
@@ -219,7 +219,7 @@ class RestfulServer extends Controller
                 $responseFormatter = $this->getResponseDataFormatter($obj->dataClass());
             }
         } else {
-            // Format: /api/v1/<MyClass>
+            // Format: /api/r1/<MyClass>
             $obj = $this->getObjectsQuery($className, $params, $sort, $limit);
         }
 
@@ -542,7 +542,7 @@ class RestfulServer extends Controller
 
     /**
      * Gets a single DataObject by ID,
-     * through a request like /api/v1/<MyClass>/<MyID>
+     * through a request like /api/r1/<MyClass>/<MyID>
      *
      * @param string $className
      * @param int $id

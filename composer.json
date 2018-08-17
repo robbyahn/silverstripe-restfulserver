@@ -1,5 +1,5 @@
 {
-    "name": "silverstripe/restfulserver",
+    "name": "robbyahn/restfulserver",
     "description": "Add a RESTful API to your SilverStripe application",
     "type": "silverstripe-module",
     "keywords": [
@@ -9,12 +9,8 @@
     ],
     "authors": [
         {
-            "name": "Hamish Friedlander",
-            "email": "hamish@silverstripe.com"
-        },
-        {
-            "name": "Sam Minnee",
-            "email": "sam@silverstripe.com"
+            "name": "Robby Ahn",
+            "email": "robbyahn@gmail.com"
         }
     ],
     "require": {
